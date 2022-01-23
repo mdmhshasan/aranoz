@@ -1,3 +1,61 @@
+/* responsive end */
+@media (min-width: 320px) and (max-width: 480px) {
+.f-content .f-menu ul li{
+text-align: center!important;
+}
+.f-menu{
+text-align: center;
+margin-top: 10px 0px;
+}
+.f-content h3{
+color: #fff;
+}
+.footers{
+background: black;
+padding: 40px 0;
+}
+.news-content{
+padding: 0;
+width: 300px!important;
+}
+.news-content input{
+width: 100%!important;
+height: 50px!important;
+background: black!important;
+padding: 5px!important;
+display: inline-block!important;
+}
+.news-content .sub-btn{
+width: 150px!important;
+padding: 10px!important;
+height: 50px!important;
+color: #000!important;
+font-size: 10px;
+line-height: 0!important;
+margin-top: 30px;
+}
+.creative .c-content .c-items{
+background: radial-gradient(black, transparent)!important;
+}
+.m-content input{
+width: 210px!important;
+}
+.sale-content .s-item{
+text-align: center!important;
+}
+.page-title h1{
+text-align: center!important;
+}
+.m-content h1{
+font-size: 25px!important;
+}
+.banner-btn{
+padding: 10px 30px!important;
+display: inline!important;
+}
+}
+
+/* responsive */
 *{
 margin: 0;
 padding: 0;
