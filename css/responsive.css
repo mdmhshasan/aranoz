@@ -72,7 +72,7 @@ text-align: center;
 }
 .page-title p {
 text-align: center;
-width: none;
+width: 390px!important;
 }
 .box {
 width: 100%!important;
