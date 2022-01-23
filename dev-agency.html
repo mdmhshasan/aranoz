@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="image/danis.jpg"/>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Readex+Pro:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <!-- icon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <title>Hello, world!</title>
+    <style type="text/css">
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    header{
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+    }
+    body{
+    font-family: 'Montserrat', sans-serif;
+    }
+    .banner{
+    width: 100%;
+    padding: 90px 0px;
+    background:linear-gradient(rgb(0, 0, 0,0.04),#d40eff),url('images/itlav.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+    .navbar-light .navbar-brand {
+    color: #ffdddd;
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: capitalize;
+    }
+    .banner::before{
+    width: 100%;
+    height: 100%;
+    filter: blur(20px);
+    }
+    .nav-item .nav-link{
+    color: #000!important;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .5s ease-in-out!important;
+    }
+    /* .nav-item .nav-link:hover{
+    background: #fff;
+    color: #000;
+    transition: .5s ease-in-out!important;
+    }
+    */
+    .nav-item{
+    border-radius: 5px;
+    margin: 0px 10px;
+    cursor: pointer;
+    }
+    .nav-item:hover{
+    background: #1efb39;
+    transition: .5s;
+    color: red;
+    }
+    .nav-item:first-child{
+    background: #1efb39;
+    }
+    .text-content{
+    text-align: left;
+    margin-top: 60px;
+    }
+    h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+    }
+    .text-content h1{
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 10px 0px;
+    /* border-bottom: 2px dotted deeppink;
+    border-top: 2px dotted deeppink; */
+    }
+    .text-content p{
+    padding: 20px 0px;
+    line-height: 30px;
+    color: #000!important;
+    font-weight: 500;
+    }
+    .text-content .button{
+    display: flex;
+    padding: 60px 0px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+    .futhres{
+    width: 100%;
+    padding: 70px 0px;
+    background: #bcfaec45;
+    border-bottom-left-radius: 15%;
+    }
+    .f-content{
+    padding: 20px 0px;
+    }
+    .f-content h2{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    }
+    .item-box{
+    padding: 20px 0px;
+    }
+    .item-box .item{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 20px #cddeda;
+    }
+    .item-box .item h3{
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px;
+    }
+    .circle{
+    width: 100%;
+    padding: 60px 0px;
+    background: #FEFEFE;
+    }
+    .img-fluid{
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    width: 200px;
+    border: 30px solid #ffffff;
+    box-shadow: 0 0 10px #c5e1e39c,0 0 10px rgba(0, 0, 0,.5);
+    }
+    .circle h4{
+    padding: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    }
+    .circle p{
+    width: 360px;
+    line-height: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    }
+    .item span ion-icon{
+    font-size: 3em;
+    text-align: center;
+    font-weight: 900;
+    color: #000;
+    }
+    /* footer section start here */
+    .middle-footer{
+    width: 100%;
+    border-top-right-radius: 15%;
+    background: #edfefa;
+    padding: 50px 0px;
+    }
+    .page-title{
+    padding: 40px 0px;
+    }
+    .text-content p {
+    color: #eee;
+    }
+    .page-title h4{
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000;
+    padding: 20px 0px;
+    }
+    .page-title p{
+    width: 650px;
+    color: #000;
+    font-weight: 300;
+    margin: auto;
+    padding-bottom: 30px;
+    }
+    .box{
+    background: red;
+    /* margin-left: 5px; */
+    padding: 0 0 0 0;
+    margin: 5px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgb(19 15 64 / 30%);
+    border-radius: 5px;
+    text-align: center;
+    }
+    .box span{
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    }
+    .box span ion-icon{
+    font-size:40px;
+    color: #18ecff;
+    font-weight: bold;
+    }
+    .box h5{
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000;
+    padding: 5px;
+    }
+    .box p{
+    padding: 5px;
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 25px;
+    }
+    footer{
+    width: 100%;
+    padding-top: 5rem;
+    }
+    .text-center{
+    padding: 20px 0px;
+    }
+    footer .text-footer .btn-box{
+    padding: 10px 70px;
+    background: red;
+    transform: translate(40%, 110%);
+    display: block;
+    display: inline-flex;
+    background: linear-gradient(
+    45deg, #162db6, #d738ff);
+    border-radius: 30px;
+    margin: auto;
+    text-align: center;
+    }
+    footer .footer-btn{
+    border-radius: 60px;
+    border: none;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding:5px 60px;
+    background: #ffa200;
+    }
+    footer .btn-box> p{
+    font-size: 20px;
+    text-align: center;
+    text-align: left;
+    margin: 0px 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 40px;
+    }
+    .box{
+    width: 24%;
+    margin:0px 3px;
+    }
+    .img-box{
+    padding: 10px 0px;
+    }
+    .img-box img{
+    border: none;
+    border-radius: 0;
+    }
+    .text-content .button .btn1{
+    border-radius: 30px;
+    border: none;
+    padding: 10px 30px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #000;
+    background: #fff;
+    }
+    .text-content .button .btn2{
+    border-radius: 30px;
+    border: none;
+    padding: 10px 35px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    background: orange;
+    color: #ffffff;
+    font-weight: 600;
+    }
+    .footer-title{
+    padding-top: 5rem;
+    margin-top: 40px;
+    text-align: center;
+    }
+    .footer-title ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">invastCo.</a>
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">about</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">fuhters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">process</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- banner section start here -->
+    <section class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="text-content">
+              <h1 class="mt-5">commite secure effential</h1>
+              <p class="text-center m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed natus sint ex doloremque nihil numquam, enim! Quae non aliquam odio deserunt quaerat ea eius corrupti eligendi, odit minus alias quas.</p>
+              
+              <div class="button m-auto">
+                <div><button class="btn1">learn more</button></div>
+                <div><button class="btn2">get start</button></div>
+              </div>
+              <div class="img-box">
+                <!-- <img src="images/dev6.png"/> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- futhres section star ther -->
+    <section class="futhres">
+      <div class="container">
+        <div class="f-content text-center">
+          <h2 text-center>futhares</h2>
+        </div>
+        <div class="item-box">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="item">
+                <span><ion-icon name="code-working-outline"></ion-icon></span>
+                <h3>to batter serve</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas commodi illum nobis cumque animi quibusdam necessitatibus nemo labore aliquid, earum voluptatem</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="item">
+                <span><ion-icon name="git-compare-outline"></ion-icon></span>
+                <h3>to batter serve</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. In saepe minus repudiandae, harum adipisci nemo eos voluptates porro, explicabo ad. Nisi, sint quam voluptatum numquam hic at cupiditate reiciendis porro!</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="item">
+                <span><ion-icon name="analytics-outline"></ion-icon></span>
+                <h3>to batter serve</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil atque sit optio laborum necessitatibus quos, fuga cumque debitis quam assumenda voluptatem</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="item mt-3">
+                  <span><ion-icon name="logo-web-component"></ion-icon></span>
+                  <h3>to batter serve</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure molestiae quo, a, cupiditate excepturi qui dolor atque, vitae impedit ex alias sint, blanditiis explicabo minus dignissimos maiores. Sapiente quis, sit.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="item mt-3">
+                  <span><ion-icon name="cloud-circle-outline"></ion-icon></span>
+                  <h3>to batter serve</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure molestiae quo, a, cupiditate excepturi qui dolor atque, vitae impedit ex alias sint, blanditiis explicabo minus dignissimos maiores. Sapiente quis, sit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- circle section start here -->
+    <section class="circle">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 my-4 img">
+            <img src="images/dev9.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-6">
+            <h4>wher is our focus</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda, enim! Repellat minus incidunt eaque, quidem dolorem voluptatem ducimus voluptates tenetur</p>
+          </div>
+        </div>
+        <div class="row p-5">
+          <div class="col-md-6 middle">
+            <h4>wher is our focus</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda, enim! Repellat minus incidunt eaque, quidem dolorem voluptatem ducimus voluptates tenetur</p>
+          </div>
+          <div class="col-md-4 m-auto my-4 img">
+            <img src="images/dev10.png" class="img-fluid"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 my-4 img">
+            <img src="images/dev11.png" class="img-fluid"/>
+          </div>
+          <div class="col-md-6">
+            <h4>wher is our focus</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda, enim! Repellat minus incidunt eaque, quidem dolorem voluptatem ducimus voluptates tenetur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer section start here -->
+    <section class="middle-footer">
+      <div class="container">
+        <div class="page-title text-center">
+          <h4>how to partner invast co?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia earum,ima sapiente quia temporibus omnis accusamus atque.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 box">
+            <span><ion-icon name="bar-chart-outline"></ion-icon></span>
+            <h5>explain our program</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing eliteritatis hi</p>
+          </div>
+          <div class="col-md-3 col-sm-3 box">
+            <span><ion-icon name="qr-code-outline"></ion-icon></span>
+            <h5>explain our program</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur, adipisicing sit sequi, magni</p>
+          </div>
+          <div class="col-md-3 col-sm-3 box">
+            <span><ion-icon name="aperture-outline"></ion-icon></span>
+            <h5>explain our program</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. explicabo, amet</p>
+          </div>
+          <div class="col-md-3 col-sm-3 box">
+            <span><ion-icon name="wallet-outline"></ion-icon></span>
+            <h5>explain our program</h5>
+            <p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit.magni ut debitis,</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-footer">
+              <h2 class="text-center">invast co</h2>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptate quos voluptatibus vitae veritatis esse neque velit reiciendis dolorem in, adipisci similique error dignissimos eaque unde quo recusandae iusto quam perspiciatis.</p>
+              <div class="btn-box">
+                <p>how ara you</p>
+                <button class="footer-btn">button</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="footer-title">
+          <ul>
+            <li><a href="#">terms & conditions</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">leran more</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
